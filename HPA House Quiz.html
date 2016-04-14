@@ -1,0 +1,156 @@
+<tw-storydata name="HPA House Quiz" startnode="1" creator="Twine" creator-version="2.0.11" ifid="D398F384-8254-4075-BE4B-890269507CDC" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+window.fbAsyncInit = function() {
+FB.init({
+  appId      : '1297713613576942',
+  xfbml      : true,
+  version    : 'v2.5'
+});
+};
+(function(d, s, id){
+ var js, fjs = d.getElementsByTagName(s)[0];
+ if (d.getElementById(id)) {return;}
+ js = d.createElement(s); js.id = id;
+ js.src = "http://connect.facebook.net/da/sdk.js";
+ fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+</script><tw-passagedata pid="1" name="Welcome" tags="" position="1450,123">[[Debug]]
+
+[[Start]]</tw-passagedata>
+<tw-passagedata pid="2" name="add hufflepoints" tags="" position="843,714">(set: $huffle = $huffle + 1)
+[[go back|Debug]]</tw-passagedata>
+<tw-passagedata pid="3" name="add griffenpoints" tags="" position="968,723">(set: $griffen = $griffen + 1)
+[[go back|Debug]]</tw-passagedata>
+<tw-passagedata pid="4" name="add ravenpoints" tags="" position="718,698">(set: $raven = $raven + 1)
+[[go back|Debug]]</tw-passagedata>
+<tw-passagedata pid="5" name="add snakepoints" tags="" position="1093,748">(set: $snake = $snake + 1)
+[[go back|Debug]]</tw-passagedata>
+<tw-passagedata pid="6" name="Almost end" tags="" position="500,500">(if: ($huffle &gt; $raven) and ($huffle &gt; $griffen) and ($huffle &gt; $snake))[[[Continue|You&#39;re a hufflepuff!]]]
+(elseif: ($raven &gt; $huffle) and ($raven &gt; $griffen) and ($raven &gt; $snake))[[[Continue|You&#39;re a ravenclaw!]]]
+(elseif: ($griffen &gt; $huffle) and ($griffen &gt; $raven) and ($griffen &gt; $snake))[[[Continue|You&#39;re a griffendor!]]]
+(elseif: ($snake &gt; $huffle) and ($snake &gt; $griffen) and ($snake &gt; $raven))[[[Continue|You&#39;re a snake!]]]
+(else:)[[[Continue|Sorting Hat Problem]]]½</tw-passagedata>
+<tw-passagedata pid="7" name="You&#39;re a hufflepuff!" tags="" position="350,700">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="8" name="You&#39;re a ravenclaw!" tags="" position="250,700">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="9" name="Sorting Hat Problem" tags="" position="301,500">bla bla bla, choose your house!
+(set: $max = Math.max($raven, $huffle, $griffen, $snake))
+(if: ($griffen is $max))[[[Griffendor|You&#39;re a griffendor!]]&lt;br/&gt;](if: $huffle is $max)[[[Hufflepuff|You&#39;re a hufflepuff!]]&lt;br/&gt;](if: $raven is $max)[[[Ravenclaw|You&#39;re a ravenclaw!]]&lt;br/&gt;](if: $snake is $max)[[[Snake|You&#39;re a snake!]]]</tw-passagedata>
+<tw-passagedata pid="10" name="You&#39;re a griffendor!" tags="" position="450,700">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="11" name="You&#39;re a snake!" tags="" position="550,700">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="12" name="fb test" tags="" position="942,537">&lt;script&gt;
+FB.ui({
+  method: &#39;share&#39;,
+  href: &#39;bomjacob.github.io/hpaquiz&#39;,
+}, function(response){});
+&lt;/script&gt;
+
+
+
+</tw-passagedata>
+<tw-passagedata pid="13" name="Debug" tags="" position="717,488">[[add hufflepoints]]
+[[add ravenpoints]]
+[[add griffenpoints]]
+[[add snakepoints]]
+
+Huffle: $huffle
+Raven: $raven
+Griffen: $griffen
+Snake: $snake
+
+[[Almost end]] 
+
+[[fb test]]</tw-passagedata>
+<tw-passagedata pid="14" name="Start" tags="" position="1450,273">You open your eyes to see a wide field stretch before you. Yellow and lilac flowers are spread across the grassy ground, emitting a lovely scent. The beginning of what seems like a large forest is to your right, and a gentle breeze ruffles through your hair. You can see some mountains in the distance. The sun hangs directly above you.
+What will you do?
+
+[[I will go exploring! I don&#39;t want to stay in this one place.|Exploring]]
+
+[[I am going to sit here and do nothing. I would rather not bother.|Stay]]
+
+[[I will look through the woods, and search for materials for a temporary camp.|Camp]]</tw-passagedata>
+<tw-passagedata pid="15" name="Exploring" tags="" position="1550,450"></tw-passagedata>
+<tw-passagedata pid="16" name="Stay" tags="" position="1314,453"></tw-passagedata>
+<tw-passagedata pid="17" name="Camp" tags="" position="1800,250">You walk to your right until you reach the border of the forest. Large tree crowns reach towards the skies, though sunbeams easily penetrate the canopy. You walk a bit further into the forest, staying on the lookout for large branches on the forest floor. A sudden hiss alerts you to a presence behind you. Turning around, you see a fierce little badger, baring its teeth at you.
+What will you do?
+
+[[I&#39;m going to grab the nearest branch and fend it off!|Branch]]
+
+[[I&#39;m going to crouch down and let it sniff my hand, to show it that I&#39;m not a threat.|Crouch]]
+
+[[I&#39;m going to run away. I&#39;m not going to deal with an angry badger!|Run]]</tw-passagedata>
+<tw-passagedata pid="18" name="Branch" tags="" position="1950,250">You back a couple of steps backwards, before reaching down to grab a stick off the forest floor. The badger crouches down, as if preparing to lunge at you. Before it has the chance to, however, you walk towards it, waving your stick around. The badger seems very unnerved and backs away. Throwing your stick at the badger seems to do the trick, and it scurries off.
+
+[[Continue|Continue01]]</tw-passagedata>
+<tw-passagedata pid="19" name="Crouch" tags="" position="1800,400">[[Continue|Continue01]] </tw-passagedata>
+<tw-passagedata pid="20" name="Run" tags="" position="2000,450">[[Continue|Continue01]]
+</tw-passagedata>
+<tw-passagedata pid="21" name="Continue01" tags="" position="2200,300">Looking around for half an hour has yielded good results, and you return to the edge of the forest to set up a camp. The sun is slowly nearing the horizon, though it still has quite a way to go. This will be enough time to use your scarce resources on setting up a camp.
+What will you do?
+
+[[I need to build a campfire to keep myself warm when the sun sets.|Campfire]]
+
+[[I need to set up some rough defences, so that wild animals won&#39;t attack me.|Defence]]
+
+[[I need to make a small shelter for me to sleep in, so that I&#39;ll be protected from the elements.|Shelter]]
+</tw-passagedata>
+<tw-passagedata pid="22" name="Campfire" tags="" position="2200,450">(set: $campfire to true)
+You clear a patch of dirt to make sure the grass won&#39;t catch on fire, and start piling up your wood with the larger branches forming a rough skeleton, with the smaller branches filling the space underneath, to help give the fire some air. You find a box of matches in your pocket. With five matches left, you quickly start up the fire. The sun is getting close to the horizon.
+What will you do?
+
+[[I&#39;m going to go look for food in the forest. Maybe it has apple trees?|Food]]
+
+[[I&#39;m going to collect some grass and leftover branches, and try to make a bed for myself.|Bed]]
+
+[[I&#39;m going to sharpen some branches to use as weapons, just in case.|Weapons]]</tw-passagedata>
+<tw-passagedata pid="23" name="Defence" tags="" position="2600,450">(set: $defence to true)
+
+[[I&#39;m going to go look for food in the forest. Maybe it has apple trees?|Food]]
+
+[[I&#39;m going to collect some grass and leftover branches, and try to make a bed for myself.|Bed]]
+
+[[I&#39;m going to sharpen some branches to use as weapons, just in case.|Weapons]]</tw-passagedata>
+<tw-passagedata pid="24" name="Shelter" tags="" position="2400,450">(set: $shelter to true)
+
+[[I&#39;m going to go look for food in the forest. Maybe it has apple trees?|Food]]
+
+[[I&#39;m going to collect some grass and leftover branches, and try to make a bed for myself.|Bed]]
+
+[[I&#39;m going to sharpen some branches to use as weapons, just in case.|Weapons]]</tw-passagedata>
+<tw-passagedata pid="25" name="Food" tags="" position="2250,650">[[Continue|Continue02]] </tw-passagedata>
+<tw-passagedata pid="26" name="Bed" tags="" position="2400,650">You gather the leftover branches, and put them next to each other, effectively making a mat that will lift you above the ground, to help reduce the cold. Afterwards, you gather some grass for cushioning. Who says that hastily made beds shouldn&#39;t be at least somewhat comfortable? The sun has reached the horizon, and as it sets, you sleep on your newly made bed.
+
+[[Continue|Continue02]]</tw-passagedata>
+<tw-passagedata pid="27" name="Weapons" tags="" position="2550,650">[[Continue|Continue02]] </tw-passagedata>
+<tw-passagedata pid="28" name="Continue02" tags="" position="2400,800">(if: $campfire is true)[A loud howl suddenly shakes you out of your sleep. You bolt up to see a lone wolf glaring at your campfire, the hairs on its muzzle slightly singed. It turns its eyes towards you with interest, before they return to the fire. The moonlight dimly illuminates your surroundings, and the flames have almost died down to embers.
+What will you do?
+
+[[Take a branch from the fire, and use the fiery end to chase away the wolf.|Fire!!]]
+[[Play dead, and hope the wolf goes away.|Play deadeded]]
+[[Run into the forest - maybe sleeping in a tree would be alright?|Runrun]]
+]
+
+(if: $defence is true)[]
+
+(if: $shelter is true)[]</tw-passagedata>
+<tw-passagedata pid="29" name="Fire!!" tags="" position="2500,1150">You pick up a branch from the campfire and swing it at the wolf, who backs away while snarling. It narrows its eyes at you, having deemed you the new enemy. As it runs towards you again, you jab your branch at it threateningly. The wolf seems to pause for a moment, before deciding that you&#39;re not worth the hassle. As it runs away, you double check your surroundings before going back to sleep.
+
+[[Continue|Continue03]]</tw-passagedata>
+<tw-passagedata pid="30" name="Play deadeded" tags="" position="2700,900">[[Continue|Continue03]] </tw-passagedata>
+<tw-passagedata pid="31" name="Runrun" tags="" position="2650,1050">[[Continue|Continue03]]</tw-passagedata>
+<tw-passagedata pid="32" name="Continue03" tags="" position="1850,1150">When you wake again, the sun has barely risen above the horizon. Shadowing your eyes with a hand, you look around. Your throat feels parched, and you look around for a source of water. 
+What will you do?
+
+[[I&#39;m going to make a divining rod! I can surely find water with that.|Divining Rod]]
+[[I&#39;m going to walk a bit further to see if I can find a river.|Walk]]
+[[I&#39;m going to ignore my thirst for now. It looks like it might rain tomorrow.|Rain]]</tw-passagedata>
+<tw-passagedata pid="33" name="Divining Rod" tags="" position="1700,1350">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="34" name="Walk" tags="" position="1850,1350">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="35" name="Rain" tags="" position="2000,1350">Double-click this passage to edit it.</tw-passagedata>
+</tw-storydata>
