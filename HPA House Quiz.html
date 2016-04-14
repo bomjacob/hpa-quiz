@@ -4,6 +4,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 window.fbAsyncInit = function() {
 FB.init({
@@ -19,6 +20,7 @@ FB.init({
  js.src = "http://connect.facebook.net/da/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
 
 
 </script><tw-passagedata pid="1" name="Welcome" tags="" position="1450,100">[[Debug]]
@@ -89,7 +91,10 @@ What will you do?
 
 [[I&#39;m going to crouch down and let it sniff my hand, to show it that I&#39;m not a threat.|Crouch]]
 
-[[I&#39;m going to run away. I&#39;m not going to deal with an angry badger!|Run]]</tw-passagedata>
+[[I&#39;m going to run away. I&#39;m not going to deal with an angry badger!|Run]]
+
+(set: $g to it + 25)
+(set: $r to it + 50)</tw-passagedata>
 <tw-passagedata pid="18" name="Branch" tags="" position="1900,450">You back a couple of steps backwards, before reaching down to grab a stick off the forest floor. The badger crouches down, as if preparing to lunge at you. Before it has the chance to, however, you walk towards it, waving your stick around. The badger seems very unnerved and backs away. Throwing your stick at the badger seems to do the trick, and it scurries off.
 
 [[Continue|Continue01]]</tw-passagedata>
@@ -211,4 +216,11 @@ What will you do?</tw-passagedata>
 <tw-passagedata pid="41" name="Leave" tags="" position="1150,1000">Double-click this passage to edit it.</tw-passagedata>
 <tw-passagedata pid="42" name="Cuties" tags="" position="1300,1000">Double-click this passage to edit it.</tw-passagedata>
 <tw-passagedata pid="43" name="Steal" tags="" position="1450,1000">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="44" name="Stat debug" tags="footer" position="909,57">
+------
+####Stat debug
+Gryffindor: $g
+Ravenclaw: $r
+Hufflepuff: $h
+Slytherin: $s</tw-passagedata>
 </tw-storydata>
