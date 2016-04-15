@@ -3,6 +3,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 window.fbAsyncInit = function() {
 FB.init({
@@ -18,6 +19,7 @@ FB.init({
  js.src = "http://connect.facebook.net/da/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
 
 
 
@@ -206,32 +208,32 @@ What will you do?
 [[Peek outside and investigate.|Investigation]]
 
 ]</tw-passagedata>
-<tw-passagedata pid="26" name="Fire!!" tags="" position="2400,1700">You pick up a branch from the campfire and swing it at the wolf, who backs away while snarling. It narrows its eyes at you, having deemed you the new enemy. As it runs towards you again, you jab your branch at it threateningly. The wolf seems to pause for a moment, before deciding that you&#39;re not worth the hassle. As it runs away, you double check your surroundings before going back to sleep.
+<tw-passagedata pid="26" name="Fire!!" tags="" position="2450,1800">You pick up a branch from the campfire and swing it at the wolf, who backs away while snarling. It narrows its eyes at you, having deemed you the new enemy. As it runs towards you again, you jab your branch at it threateningly. The wolf seems to pause for a moment, before deciding that you&#39;re not worth the hassle. As it runs away, you double check your surroundings before going back to sleep.
 
 [[Continue|Continue03]]
 
 (set: $g to it +10)</tw-passagedata>
-<tw-passagedata pid="27" name="Play deadeded" tags="" position="2700,1450">You immediately lie down again, hoping that the wolf isn&#39;t suspicious of you. Halting your breath to near nothing, you listen wearily as the wolf sniffs around in your camp. It doesn&#39;t seem especially interested in you, and after a short while, it leaves. You let out a breath of relief, before going back to sleep.
+<tw-passagedata pid="27" name="Play deadeded" tags="" position="2700,1500">You immediately lie down again, hoping that the wolf isn&#39;t suspicious of you. Halting your breath to near nothing, you listen wearily as the wolf sniffs around in your camp. It doesn&#39;t seem especially interested in you, and after a short while, it leaves. You let out a breath of relief, before going back to sleep.
 
 [[Continue|Continue03]] 
 
 (set: $h to it +5)
 (set: $r to it +5)</tw-passagedata>
-<tw-passagedata pid="28" name="Runrun" tags="" position="2600,1600">You get up and run away. The wolf follows you for a bit, but quickly gives up. Running back to the edge of the forest, you see a tree with large branches that seems good enough to sleep on. Deciding that this will do, you climb into the tree, falling asleep on a branch.
+<tw-passagedata pid="28" name="Runrun" tags="" position="2600,1650">You get up and run away. The wolf follows you for a bit, but quickly gives up. Running back to the edge of the forest, you see a tree with large branches that seems good enough to sleep on. Deciding that this will do, you climb into the tree, falling asleep on a branch.
 
 [[Continue|Continue03]]
 
 (set: $h to it +20)
 (set: $r to it +5)</tw-passagedata>
-<tw-passagedata pid="29" name="Continue03" tags="" position="1750,1700">When you wake again, the sun has barely risen above the horizon. Shadowing your eyes with a hand, you look around. Your throat feels parched, and you look around for a source of water. 
+<tw-passagedata pid="29" name="Continue03" tags="" position="1500,1900">When you wake again, the sun has barely risen above the horizon. Shadowing your eyes with a hand, you look around. Your throat feels parched, and you look around for a source of water. 
 What will you do?
 
 [[I&#39;m going to make a divining rod! I can surely find water with that.|Divining Rod]]
 [[I&#39;m going to walk a bit further to see if I can find a river.|Walk]]
 [[I&#39;m going to ignore my thirst for now. It looks like it might rain tomorrow.|Rain]]</tw-passagedata>
-<tw-passagedata pid="30" name="Divining Rod" tags="" position="1600,1900">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="31" name="Walk" tags="" position="1750,1900">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="32" name="Rain" tags="" position="1900,1900">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="30" name="Divining Rod" tags="" position="1350,2100">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="31" name="Walk" tags="" position="1500,2100">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="32" name="Rain" tags="" position="1650,2100">Double-click this passage to edit it.</tw-passagedata>
 <tw-passagedata pid="33" name="Bye Wolf" tags="" position="2700,1300">You grab your spear, lying on the floor, before thrusting it at the wolf. The canine creature doesn&#39;t realise in time, and your spear hits its shoulder, earning a whine. The wolf quickly decides that you are not worth the effort, and limps away from your camp. You go back to sleep.
 
 [[Continue|Continue03]]
@@ -342,7 +344,12 @@ Gyffindor: $g
 Ravenclaw: $r
 Hufflepuff: $h
 Slytherin: $s</tw-passagedata>
-<tw-passagedata pid="53" name="Shady forest" tags="" position="950,700">You (if: (history:) contains &quot;Praise the Sun2&quot;)[grudgingly] get up and start walking towards the forest.
+<tw-passagedata pid="53" name="Shady forest" tags="" position="950,700">You (if: (history:) contains &quot;Praise the Sun2&quot;)[grudgingly] get up and start walking towards the forest. The chill of the shadows is a stark contrast to the bright sun, and you feel your skin cooling down. As you walk a bit further, you come across some ruins.
+What will you do?
+
+[[Explore the ruins! Maybe it contains hidden knowledge of ancient civilizations.|Exploration yay]]
+[[Continue walking. It&#39;s probably boring.|Definitely boring]]
+[[Circle around it. Maybe it has treasure.|Treasure??]]
 
 (set: $r to it + 25)
 
@@ -375,4 +382,43 @@ What will you do?
 (set: $r to it -5)</tw-passagedata>
 <tw-passagedata pid="58" name="You&#39;re a gryffindor!" tags="" position="600,450">Double-click this passage to edit it.</tw-passagedata>
 <tw-passagedata pid="59" name="You&#39;re a slytherin!" tags="" position="450,450">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="60" name="Exploration yay" tags="" position="800.0001,1000">You walk through the ruins, looking for any signs of the civilization that must have built it. Your search is rewarded when you find a somewhat intact wall with what looks like chicken-scratches. You can&#39;t decipher it though, and after a while, you leave the place.
+
+[[Continue|Continue06]]</tw-passagedata>
+<tw-passagedata pid="61" name="Definitely boring" tags="" position="850.0002,1250">You eye the ruins warily, not wanting to stay around longer than necessary. You leave the rubble behind, and continue through the forest.
+
+[[Continue|Continue06]]</tw-passagedata>
+<tw-passagedata pid="62" name="Treasure??" tags="" position="950.0001,1100">You walk around the crumbled rocks, scanning the area briefly for anything shiny. A quick flash of light catches your eyes, and you go closer to inspect. An intricate golden clock lies between the rubble, not in working condition, but it&#39;s gold nonetheless.
+
+[[Continue|Continue06]]</tw-passagedata>
+<tw-passagedata pid="63" name="Continue06" tags="" position="600.0001,1150">As you walk away from the ruins, you notice a circular clearing, devoid of trees. In the middle stands a pedestal with a large tome on it.
+What will you do?
+
+[[Read it! It might contain something interesting.|Reading is for nerds]]
+[[Leave it. I don&#39;t have time for reading.|Leave book]]
+[[Burn it! Burn it to the ground!|Burn baby burn]]</tw-passagedata>
+<tw-passagedata pid="64" name="Reading is for nerds" tags="" position="450,1400">You approach the book carefully, giving it a quick once-over. The book is covered in something that looks like fur, and the title reads &quot;Monster Book of Monsters&quot;. You try to open the book, before it suddenly seems to come to life, snapping at you agressively. As it chases you, you run for your life.
+
+[[Continue|Continue07]]</tw-passagedata>
+<tw-passagedata pid="65" name="Leave book" tags="" position="600.0001,1350">You look briefly at the book, reading over the title. &quot;Monster Book of Monsters&quot;. The furry exterior seems slightly concerning, and you decide to leave the book alone.
+
+[[Continue|Continue07]]</tw-passagedata>
+<tw-passagedata pid="66" name="Burn baby burn" tags="" position="750.0001,1400">You grab a box of matches from your pocket, briefly wondering why you&#39;re actually doing this. Oh, well, maybe the book could be dangerous? Leaving a burning match on the furry cover, you walk away from the fire in style.
+
+[[Continue|Continue07]]</tw-passagedata>
+<tw-passagedata pid="67" name="Continue07" tags="" position="600,1550">You look up at the sky and realise that you should find somewhere to sleep.
+What will you do?
+
+[[Find a suitable tree to sleep in.|Sleeping in the trees... again]]
+[[Go back to those ruins. They&#39;re probably not haunted.|Spooky]]
+[[Sleep on the ground.|Is this a good idea?]]</tw-passagedata>
+<tw-passagedata pid="68" name="Sleeping in the trees... again" tags="" position="650,1850">You walk around the trees for a bit, until you find a satisfactorily sturdy one. Climbing into the tree, you find a large branch and sleep.
+
+[[Continue|Continue03]]</tw-passagedata>
+<tw-passagedata pid="69" name="Spooky" tags="" position="750,1700">You backtrack your way through the forest, finding a place amongst the crumbled buildings. You find a place that effectively blocks the wind, and fall asleep, hoping that the ruins won&#39;t collapse while you sleep.
+
+[[Continue|Continue03]]</tw-passagedata>
+<tw-passagedata pid="70" name="Is this a good idea?" tags="" position="900,1600">You look around. The forest seems very calm and quiet. Deciding that this spot is as good as any, you lie down on the soft forest floor, quickly falling asleep.
+
+[[Continue|Continue03]]</tw-passagedata>
 </tw-storydata>
