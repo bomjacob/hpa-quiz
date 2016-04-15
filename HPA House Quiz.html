@@ -1,12 +1,5 @@
 <tw-storydata name="HPA House Quiz" startnode="1" creator="Twine" creator-version="2.0.11" ifid="D398F384-8254-4075-BE4B-890269507CDC" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
-
-
-
-
-
-
-
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 window.fbAsyncInit = function() {
 FB.init({
@@ -22,11 +15,6 @@ FB.init({
  js.src = "http://connect.facebook.net/da/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-
-
-
-
-
 </script><tw-passagedata pid="1" name="Welcome" tags="" position="1450,100">[[Debug]]
 
 [[Start]]</tw-passagedata>
@@ -87,7 +75,12 @@ What will you do?
 [[Follow it! I have nowhere I need to be anyways.|Follow it!]]
 [[Ignore it. It might even be hostile!|Ignore it]]
 </tw-passagedata>
-<tw-passagedata pid="16" name="Stay" tags="" position="950,600"></tw-passagedata>
+<tw-passagedata pid="16" name="Stay" tags="" position="1200,600">You sit down on the grass, closing your eyes for a while. You feel the sunlight on your skin. Maybe a bit too much on your skin. As much as you would like to stay in place, you feel like you should find some shade.
+What will you do?
+
+[[Go look for shadow by the trees.|Shady forest]]
+[[Stay in the sun. A little sun never hurt anyone.|Praise the Sun]]
+</tw-passagedata>
 <tw-passagedata pid="17" name="Camp" tags="" position="1750,600">You walk to your right until you reach the border of the forest. Large tree crowns reach towards the skies, though sunbeams easily penetrate the canopy. You walk a bit further into the forest, staying on the lookout for large branches on the forest floor. A sudden hiss alerts you to a presence behind you. Turning around, you see a fierce little badger, baring its teeth at you.
 What will you do?
 
@@ -206,7 +199,7 @@ What will you do?
 [[Run into the forest - you&#39;d rather not risk staying around an angry wolf.|Runrun]]
 (if: (history:) contains &quot;Weapons&quot;)[[[Use your weapon to fend off the wolf.|Bye Wolf]]]
 </tw-passagedata>
-<tw-passagedata pid="39" name="Follow it!" tags="" position="1200,800">You follow the fox as it bounds through the grass. After a while, the fox stops at a grassy hill. It has a dead rabbit in its mouth, which it lowers to what looks like a large rabbit&#39;s hole. Three small fox kits tumble out of the small den.
+<tw-passagedata pid="39" name="Follow it!" tags="" position="1250,750">You follow the fox as it bounds through the grass. After a while, the fox stops at a grassy hill. It has a dead rabbit in its mouth, which it lowers to what looks like a large rabbit&#39;s hole. Three small fox kits tumble out of the small den.
 What will you do?
 
 [[Leave the family alone. I shouldn&#39;t disturb them.|Leave]]
@@ -273,4 +266,28 @@ Gyffindor: $g
 Ravenclaw: $r
 Hufflepuff: $h
 Slytherin: $s</tw-passagedata>
+<tw-passagedata pid="55" name="Shady forest" tags="" position="950,700">You (if: (history:) contains &quot;Praise the Sun2&quot;)[grudgingly] get up and start walking towards the forest.</tw-passagedata>
+<tw-passagedata pid="56" name="Praise the Sun" tags="" position="1050,550">You stubbornly refuse to seek shadow. The sun feels warmer with each minute that passes.
+What will you do?
+
+[[Go look for shadow by the trees.|Shady forest]]
+[[Stay in the sun. I&#39;m not going to move from here.|Praise the Sun2]]
+</tw-passagedata>
+<tw-passagedata pid="57" name="Praise the Sun2" tags="" position="900,550">You keep sitting in the sun, noticing the slightly red tone some of your skin is taking.
+What will you do?
+
+[[Go look for shadow by the trees.|Shady forest]]
+[[Stay in the sun. So what if I get a little bit red?|Praise the Sun3]]
+</tw-passagedata>
+<tw-passagedata pid="58" name="Praise the Sun3" tags="" position="800,650">The red tones spread and darken. Your skin is starting to feel a bit sore.
+What will you do?
+
+[[Go look for shadow by the trees.|Shady forest]]
+[[Stay in the sun. I&#39;m not backing out like this.|Praise the Sun4]]
+</tw-passagedata>
+<tw-passagedata pid="59" name="Praise the Sun4" tags="" position="800,800">Your skin feels like it&#39;s melting. You feel like you&#39;re probably going to regret this. Are you happy with yourself?
+What will you do?
+
+[[Go look for shadow by the trees.|Shady forest]]
+</tw-passagedata>
 </tw-storydata>
