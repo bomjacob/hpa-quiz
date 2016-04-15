@@ -1,5 +1,6 @@
 <tw-storydata name="HPA House Quiz" startnode="1" creator="Twine" creator-version="2.0.11" ifid="D398F384-8254-4075-BE4B-890269507CDC" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 window.fbAsyncInit = function() {
 FB.init({
@@ -15,6 +16,7 @@ FB.init({
  js.src = "http://connect.facebook.net/da/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
 </script><tw-passagedata pid="1" name="Welcome" tags="" position="1450,100">[[Debug]]
 
 [[Start]]</tw-passagedata>
@@ -69,7 +71,7 @@ What will you do?
 [[I am going to sit here and do nothing. I would rather not bother.|Stay]]
 
 [[I will look through the woods, and search for materials for a temporary camp.|Camp]]</tw-passagedata>
-<tw-passagedata pid="15" name="Exploring" tags="" position="1450,600">You continue through the meadows, heading for the mountains in the far distance. A flash of orange moves through the grass. As you follow it with your eyes, you realise it&#39;s a fox.
+<tw-passagedata pid="15" name="Exploring" tags="" position="1450.0001,600">You continue through the meadows, heading for the mountains in the far distance. A flash of orange moves through the grass. As you follow it with your eyes, you realise it&#39;s a fox.
 What will you do?
 
 [[Follow it! I have nowhere I need to be anyways.|Follow it!]]
@@ -88,17 +90,28 @@ What will you do?
 
 [[I&#39;m going to crouch down and let it sniff my hand, to show it that I&#39;m not a threat.|Crouch]]
 
-[[I&#39;m going to run away. I&#39;m not going to deal with an angry badger!|Run]]</tw-passagedata>
+[[I&#39;m going to run away. I&#39;m not going to deal with an angry badger!|Run]]
+
+(set: $g to it + 25)
+(set: $r to it + 50)</tw-passagedata>
 <tw-passagedata pid="18" name="Branch" tags="" position="1900,450">You back a couple of steps backwards, before reaching down to grab a stick off the forest floor. The badger crouches down, as if preparing to lunge at you. Before it has the chance to, however, you walk towards it, waving your stick around. The badger seems very unnerved and backs away. Throwing your stick at the badger seems to do the trick, and it scurries off.
 
-[[Continue|Continue01]]</tw-passagedata>
+[[Continue|Continue01]]
+
+(set: $s to it + 25)
+(set: $g to it + 25)</tw-passagedata>
 <tw-passagedata pid="19" name="Crouch" tags="" position="1900,600">You crouch down on the forest floor, and extend your hand towards the badger. It gives you a weary look, before walking a couple of steps closer to sniff your hand. You extend your hand a bit further in the hopes of touching it, but the movement scares the badger, who scurries away.
 
-[[Continue|Continue01]] </tw-passagedata>
+[[Continue|Continue01]] 
+
+(set: $g to it + 50)</tw-passagedata>
 <tw-passagedata pid="20" name="Run" tags="" position="1900,750">You immediately back a couple of steps away, before turning your back to the badger and running away. You don&#39;t stop to check whether or not it&#39;s following you. A couple of minutes later, you&#39;re out of breath, and stop to see that you&#39;re alone again. You decide to continue searching for materials.
 
 [[Continue|Continue01]]
-</tw-passagedata>
+
+(set: $g to it -25)
+(set: $r to it +20)
+(set: $h to it +5)</tw-passagedata>
 <tw-passagedata pid="21" name="Continue01" tags="" position="2150,650">Looking around for half an hour has yielded good results, and you return to the edge of the forest to set up a camp. The sun is slowly nearing the horizon, though it still has quite a way to go. This will be enough time to use your scarce resources on setting up a camp.
 What will you do?
 
@@ -108,43 +121,51 @@ What will you do?
 
 [[I need to make a small shelter for me to sleep in, so that I&#39;ll be protected from the elements.|Shelter]]
 </tw-passagedata>
-<tw-passagedata pid="22" name="Campfire" tags="" position="2150,800">(set: $campfire to true)
-You clear a patch of dirt to make sure the grass won&#39;t catch on fire, and start piling up your wood with the larger branches forming a rough skeleton, with the smaller branches filling the space underneath, to help give the fire some air. You find a box of matches in your pocket. With five matches left, you quickly start up the fire. The sun is getting close to the horizon.
+<tw-passagedata pid="22" name="Campfire" tags="" position="2150,800">You clear a patch of dirt to make sure the grass won&#39;t catch on fire, and start piling up your wood with the larger branches forming a rough skeleton, with the smaller branches filling the space underneath, to help give the fire some air. You find a box of matches in your pocket. With five matches left, you quickly start up the fire. The sun is getting close to the horizon.
 What will you do?
 
 [[I&#39;m going to go look for food in the forest. Maybe it has apple trees?|Food]]
 
 [[I&#39;m going to collect some grass and leftover branches, and try to make a bed for myself.|Bed]]
 
-[[I&#39;m going to sharpen some branches to use as weapons, just in case.|Weapons]]</tw-passagedata>
-<tw-passagedata pid="23" name="Defence" tags="" position="2550,800">(set: $defence to true)
-You start collecting the sticks of various sizes, using a sharp flint stone for sharpening them. After deciding that you have enough, you set them into the ground, pointing away from yourself. This should keep away larger animals. The sun is getting close to the horizon.
+[[I&#39;m going to sharpen some branches to use as weapons, just in case.|Weapons]]
+
+(set: $r to it +10)</tw-passagedata>
+<tw-passagedata pid="23" name="Defence" tags="" position="2550,800">You start collecting the sticks of various sizes, using a sharp flint stone for sharpening them. After deciding that you have enough, you set them into the ground, pointing away from yourself. This should keep away larger animals. The sun is getting close to the horizon.
 What will you do?
 
 [[I&#39;m going to go look for food in the forest. Maybe it has apple trees?|Food]]
 
 [[I&#39;m going to collect some grass and leftover branches, and try to make a bed for myself.|Bed]]
 
-[[I&#39;m going to sharpen some branches to use as weapons, just in case.|Weapons]]</tw-passagedata>
-<tw-passagedata pid="24" name="Shelter" tags="" position="2350,800">(set: $shelter to true)
-You gather two branches with a split, and use these as a fundament for a small shelter. Driving the sticks into the soft ground is easy, and you manage to make a makeshift shelter, that should protect you from the elements. The sun is getting close to the horizon.
+[[I&#39;m going to sharpen some branches to use as weapons, just in case.|Weapons]]
+
+(set: $g to it +10)
+(set: $r to it +10)</tw-passagedata>
+<tw-passagedata pid="24" name="Shelter" tags="" position="2350,800">You gather two branches with a split, and use these as a fundament for a small shelter. Driving the sticks into the soft ground is easy, and you manage to make a makeshift shelter, that should protect you from the elements. The sun is getting close to the horizon.
 What will you do?
 
 [[I&#39;m going to go look for food in the forest. Maybe it has apple trees?|Food]]
 
 [[I&#39;m going to collect some grass and leftover branches, and try to make a bed for myself.|Bed]]
 
-[[I&#39;m going to sharpen some branches to use as weapons, just in case.|Weapons]]</tw-passagedata>
+[[I&#39;m going to sharpen some branches to use as weapons, just in case.|Weapons]]
+
+(set: $r to it +10)</tw-passagedata>
 <tw-passagedata pid="25" name="Food" tags="" position="2199,1000">You wander away from your temporary camp, and back towards the forest. The trees seem a bit more menacing in the low light, but this doesn&#39;t keep you from entering the forest. Searching around for a bit yields questionable results, though you do manage to find a few eatable berries. Satisfied, you go back to your camp and sleep.
 
 [[Continue|Continue02]] </tw-passagedata>
 <tw-passagedata pid="26" name="Bed" tags="" position="2350,1000">You gather the leftover branches, and put them next to each other, effectively making a mat that will lift you above the ground, to help reduce the cold. Afterwards, you gather some grass for cushioning. Who says that hastily made beds shouldn&#39;t be at least somewhat comfortable? The sun has reached the horizon, and as it sets, you sleep on your newly made bed.
 
-[[Continue|Continue02]]</tw-passagedata>
+[[Continue|Continue02]]
+
+(set: $h to it +10)</tw-passagedata>
 <tw-passagedata pid="27" name="Weapons" tags="" position="2500,1000">You find some nearby flint rocks, and tie them to the end of a couple of sticks with some dental floss you found in your pocket. It might not be efficient, but it should be okay for minor encounters. The sun has reached the horizon, and as it sets, you find a spot (if: (history:) contains &quot;Shelter&quot;)[underneath the branches making up your shelter,](else:)[on the grass,] falling asleep.
 
-[[Continue|Continue02]] </tw-passagedata>
-<tw-passagedata pid="28" name="Continue02" tags="" position="2350,1150">(if: $campfire is true)[A loud howl suddenly shakes you out of your sleep. You bolt up to see a lone wolf glaring at your campfire, the hairs on its muzzle slightly singed. It turns its eyes towards you with interest, before they return to the fire. The moonlight dimly illuminates your surroundings, and the flames have almost died down to embers.
+[[Continue|Continue02]] 
+
+(set: $s to it +10)</tw-passagedata>
+<tw-passagedata pid="28" name="Continue02" tags="" position="2350,1150">(if: (history:) contains &quot;Campfire&quot;)[A loud howl suddenly shakes you out of your sleep. You bolt up to see a lone wolf glaring at your campfire, the hairs on its muzzle slightly singed. It turns its eyes towards you with interest, before they return to the fire. The moonlight dimly illuminates your surroundings, and the flames have almost died down to embers.
 What will you do?
 
 [[Take a branch from the fire, and use the fiery end to chase away the wolf.|Fire!!]]
@@ -153,7 +174,7 @@ What will you do?
 (if: (history:) contains &quot;Weapons&quot;)[[[Use your weapon to fend off the wolf.|Bye Wolf]]]
 ]
 
-(if: $defence is true)[A loud whine suddenly shakes you out of your sleep. As you bolt up, you see that a wolf has stepped on one of the spikes that encircles your encampment. It seems to be in pain.
+(if: (history:) contains &quot;Defence&quot;)[A loud whine suddenly shakes you out of your sleep. As you bolt up, you see that a wolf has stepped on one of the spikes that encircles your encampment. It seems to be in pain.
 What will you do?
 
 [[Play dead, and hope the wolf goes away.|Play deadeded]]
@@ -161,7 +182,7 @@ What will you do?
 (if: (history:) contains &quot;Weapons&quot;)[[[Use your weapon to fend off the wolf.|Bye Wolf]]]
 ]
 
-(if: $shelter is true)[You wake as you hear some rustling noises outside, probably belonging to some large animal. It seems to walk around your shelter in circles.
+(if: (history:) contains &quot;Shelter&quot;)[You wake as you hear some rustling noises outside, probably belonging to some large animal. It seems to walk around your shelter in circles.
 What will you do?
 
 [[Ignore it and go back to sleep. It&#39;s probably not a danger.|Back to Sleep]]
@@ -170,13 +191,22 @@ What will you do?
 ]</tw-passagedata>
 <tw-passagedata pid="29" name="Fire!!" tags="" position="2400,1700">You pick up a branch from the campfire and swing it at the wolf, who backs away while snarling. It narrows its eyes at you, having deemed you the new enemy. As it runs towards you again, you jab your branch at it threateningly. The wolf seems to pause for a moment, before deciding that you&#39;re not worth the hassle. As it runs away, you double check your surroundings before going back to sleep.
 
-[[Continue|Continue03]]</tw-passagedata>
+[[Continue|Continue03]]
+
+(set: $g to it +10)
+(set: $s to it +10)</tw-passagedata>
 <tw-passagedata pid="30" name="Play deadeded" tags="" position="2700,1450">You immediately lie down again, hoping that the wolf isn&#39;t suspicious of you. Halting your breath to near nothing, you listen wearily as the wolf sniffs around in your camp. It doesn&#39;t seem especially interested in you, and after a short while, it leaves. You let out a breath of relief, before going back to sleep.
 
-[[Continue|Continue03]] </tw-passagedata>
+[[Continue|Continue03]] 
+
+(set: $h to it +5)
+(set: $r to it +5)</tw-passagedata>
 <tw-passagedata pid="31" name="Runrun" tags="" position="2600,1600">You get up and run away. The wolf follows you for a bit, but quickly gives up. Running back to the edge of the forest, you see a tree with large branches that seems good enough to sleep on. Deciding that this will do, you climb into the tree, falling asleep on a branch.
 
-[[Continue|Continue03]]</tw-passagedata>
+[[Continue|Continue03]]
+
+(set: $h to it +20)
+(set: $r to it +5)</tw-passagedata>
 <tw-passagedata pid="32" name="Continue03" tags="" position="1750,1700">When you wake again, the sun has barely risen above the horizon. Shadowing your eyes with a hand, you look around. Your throat feels parched, and you look around for a source of water. 
 What will you do?
 
@@ -188,10 +218,15 @@ What will you do?
 <tw-passagedata pid="35" name="Rain" tags="" position="1900,1900">Double-click this passage to edit it.</tw-passagedata>
 <tw-passagedata pid="36" name="Bye Wolf" tags="" position="2700,1300">You grab your spear, lying on the floor, before thrusting it at the wolf. The canine creature doesn&#39;t realise in time, and your spear hits its shoulder, earning a whine. The wolf quickly decides that you are not worth the effort, and limps away from your camp. You go back to sleep.
 
-[[Continue|Continue03]]</tw-passagedata>
+[[Continue|Continue03]]
+
+(set: $g to it +10)
+(set: $s to it +10)</tw-passagedata>
 <tw-passagedata pid="37" name="Back to Sleep" tags="" position="2250,1300">You ignore the creature, and go back to sleep, absentmindedly noticing the sounds of footsteps moving away from your camp.
 
-[[Continue|Continue03]]</tw-passagedata>
+[[Continue|Continue03]]
+
+(set: $g to it +10)</tw-passagedata>
 <tw-passagedata pid="38" name="Investigation" tags="" position="2600,1150">As you peek outside your shelter, you see the vague shadow of a large wolf. It seems interested in your camp, although it doesn&#39;t seem like it has noticed you.
 What will you do?
 
@@ -266,28 +301,35 @@ Gyffindor: $g
 Ravenclaw: $r
 Hufflepuff: $h
 Slytherin: $s</tw-passagedata>
-<tw-passagedata pid="55" name="Shady forest" tags="" position="950,700">You (if: (history:) contains &quot;Praise the Sun2&quot;)[grudgingly] get up and start walking towards the forest.</tw-passagedata>
-<tw-passagedata pid="56" name="Praise the Sun" tags="" position="1050,550">You stubbornly refuse to seek shadow. The sun feels warmer with each minute that passes.
+<tw-passagedata pid="56" name="Shady forest" tags="" position="950,700">You (if: (history:) contains &quot;Praise the Sun2&quot;)[grudgingly] get up and start walking towards the forest.
+
+(set: $r to it + 25)
+
+(if: not (history:) contains &quot;Praise the Sun&quot;)[(set: $h to it +10)]</tw-passagedata>
+<tw-passagedata pid="57" name="Praise the Sun" tags="" position="1050,550">You stubbornly refuse to seek shadow. The sun feels warmer with each minute that passes.
 What will you do?
 
 [[Go look for shadow by the trees.|Shady forest]]
-[[Stay in the sun. I&#39;m not going to move from here.|Praise the Sun2]]
-</tw-passagedata>
-<tw-passagedata pid="57" name="Praise the Sun2" tags="" position="900,550">You keep sitting in the sun, noticing the slightly red tone some of your skin is taking.
+[[Stay in the sun. I&#39;m not going to move from here.|Praise the Sun2]]</tw-passagedata>
+<tw-passagedata pid="58" name="Praise the Sun2" tags="" position="900,550">You keep sitting in the sun, noticing the slightly red tone some of your skin is taking.
 What will you do?
 
 [[Go look for shadow by the trees.|Shady forest]]
 [[Stay in the sun. So what if I get a little bit red?|Praise the Sun3]]
-</tw-passagedata>
-<tw-passagedata pid="58" name="Praise the Sun3" tags="" position="800,650">The red tones spread and darken. Your skin is starting to feel a bit sore.
+
+(set: $r to it -5)</tw-passagedata>
+<tw-passagedata pid="59" name="Praise the Sun3" tags="" position="800,650">The red tones spread and darken. Your skin is starting to feel a bit sore.
 What will you do?
 
 [[Go look for shadow by the trees.|Shady forest]]
 [[Stay in the sun. I&#39;m not backing out like this.|Praise the Sun4]]
-</tw-passagedata>
-<tw-passagedata pid="59" name="Praise the Sun4" tags="" position="800,800">Your skin feels like it&#39;s melting. You feel like you&#39;re probably going to regret this. Are you happy with yourself?
+
+(set: $r to it -5)</tw-passagedata>
+<tw-passagedata pid="60" name="Praise the Sun4" tags="" position="800,800">Your skin feels like it&#39;s melting. You feel like you&#39;re probably going to regret this. Are you happy with yourself?
 What will you do?
 
 [[Go look for shadow by the trees.|Shady forest]]
-</tw-passagedata>
+
+(set: $s to it +20)
+(set: $r to it -5)</tw-passagedata>
 </tw-storydata>
