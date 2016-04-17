@@ -39,10 +39,6 @@ tw-passage {
   line-height: 1.5;
 }
 
-tw-include {
-  visibility: hidden;
-}
-
 .enchantment-link, tw-link {
   color: #E55A19;
   display: inline-block;
@@ -83,6 +79,14 @@ tw-link[passage-name="Debug"] {
   cursor: default;
 }
 
+tw-hook[name="Stats"] {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  color: #ccc;
+  cursor: default;
+}
+
 tw-icon {
   opacity: 0.2;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">
@@ -102,10 +106,9 @@ FB.init({
 }(document, 'script', 'facebook-jssdk'));
 
 
-</script><tw-passagedata pid="1" name="Welcome" tags="" position="1450,100">[[Debug]]
 
-[[Start]]</tw-passagedata>
-<tw-passagedata pid="2" name="Almost end" tags="" position="400,150">The sorting hat is talking quietly to itself.
+</script><tw-passagedata pid="1" name="Welcome" tags="" position="1450,100">[[Start]]</tw-passagedata>
+<tw-passagedata pid="2" name="Almost end" tags="" position="350,150">The sorting hat is talking quietly to itself.
 {{(set: $points to (a: $g, $r, $h, $s))
 (set: $show to (a:))
 (set: $max to (max: ...$points))
@@ -138,7 +141,7 @@ FB.init({
 ]}</tw-passagedata>
 <tw-passagedata pid="3" name="You&#39;re a hufflepuff!" tags="" position="300,450">Double-click this passage to edit it.</tw-passagedata>
 <tw-passagedata pid="4" name="You&#39;re a ravenclaw!" tags="" position="150,450">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="5" name="fb test" tags="" position="1014,304">&lt;script&gt;
+<tw-passagedata pid="5" name="fb test" tags="" position="900,300">&lt;script&gt;
 FB.ui({
   method: &#39;share&#39;,
   href: &#39;bomjacob.github.io/hpaquiz&#39;,
@@ -148,7 +151,7 @@ FB.ui({
 
 
 </tw-passagedata>
-<tw-passagedata pid="6" name="Debug" tags="" position="700,150">(link-repeat: &quot;Add Gryffinpoints&quot;)[(set: $g to it +5) (goto: &quot;Debug&quot;)]
+<tw-passagedata pid="6" name="Debug" tags="" position="700,300">(link-repeat: &quot;Add Gryffinpoints&quot;)[(set: $g to it +5) (goto: &quot;Debug&quot;)]
 (link-repeat: &quot;Add Ravenpoints&quot;)[(set: $r to it +5) (goto: &quot;Debug&quot;)]
 (link-repeat: &quot;Add Hufflepoints&quot;)[(set: $h to it +5) (goto: &quot;Debug&quot;)]
 (link-repeat: &quot;Add Slytherpoints&quot;)[(set: $s to it +5) (goto: &quot;Debug&quot;)]
@@ -407,12 +410,11 @@ What will you do?
 [[Continue|Continue03]]
 
 (set: $g to it +10)</tw-passagedata>
-<tw-passagedata pid="48" name="Stat debug" tags="footer" position="124,130">----
-####Stat debug
-Gyffindor: $g
+<tw-passagedata pid="48" name="Stat debug" tags="footer" position="700.0001,100">[Stats]&lt;Stats|(click-replace: ?Stats)[Gyffindor: $g
 Ravenclaw: $r
 Hufflepuff: $h
-Slytherin: $s</tw-passagedata>
+Slytherin: $s]
+[[Debug]]</tw-passagedata>
 <tw-passagedata pid="49" name="Shady forest" tags="" position="950,700">You (if: (history:) contains &quot;Praise the Sun2&quot;)[grudgingly] get up and start walking towards the forest. The chill of the shadows is a stark contrast to the bright sun, and you feel your skin cooling down. As you walk a bit further, you come across some ruins.
 What will you do?
 
