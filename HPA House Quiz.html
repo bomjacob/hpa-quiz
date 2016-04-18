@@ -89,7 +89,8 @@ tw-hook[name="Stats"] {
 
 tw-icon {
   opacity: 0.2;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 window.fbAsyncInit = function() {
 FB.init({
   appId      : '1297713613576942',
@@ -549,14 +550,15 @@ What will you say?
 [[&quot;Yes, I have a dog.&quot;|Dog]]
 [[&quot;I own a canary bird! It&#39;s really noisy.&quot;|Birds!]]
 [[&quot;I have a cat. It&#39;s very independant.&quot;|Cat]]</tw-passagedata>
-<tw-passagedata pid="75" name="Window peeking" tags="" position="1400,2700">You stare out the window with unfocused eyes, as the terrain passes by. Most of the surroundings are filled with pine trees, and the sun is still high in the sky.
+<tw-passagedata pid="75" name="Window peeking" tags="" position="1400.0001,2700">You stare out the window with unfocused eyes, as the terrain passes by. Most of the surroundings are filled with pine trees, and the sun is still high in the sky.
 You find your MP3 player, and scroll through your music library.
 What will you listen to?
 
 [[Classical music. It fits the situation perfectly.|Classical music]]
 [[Something that isn&#39;t boring, like pop music or some light rock.|Pop music]]
 [[I actually really like opera. It&#39;s a secret to everybody.|Opera!]]
-[[Some sweet, smooth jazz.|Smooth jazz]]</tw-passagedata>
+[[Some sweet, smooth jazz.|Smooth jazz]]
+[[I&#39;d actually prefer silence.|Crickets]]</tw-passagedata>
 <tw-passagedata pid="76" name="More books!" tags="" position="1600,2700">You grab a book from your luggage.
 Which book will you choose?
 
@@ -573,7 +575,7 @@ What will you do?
 [[Stare out the window.|Window peeking]]
 [[Read a book.|More books!]]
 [[&quot;...&quot;|The DoTs are X-treme]]</tw-passagedata>
-<tw-passagedata pid="78" name="The DoTs are X-treme" tags="" position="2000,2650">&quot;...&quot;
+<tw-passagedata pid="78" name="The DoTs are X-treme" tags="" position="2000,2600">&quot;...&quot;
 You decide to dedicate your life to silence, and even your thoughts become a silent nothingness.
 Wh.t w.l. ..u d. .o.?
 
@@ -582,37 +584,95 @@ Wh.t w.l. ..u d. .o.?
 ...
 
 [[You decide to read a book.|More books!]]</tw-passagedata>
-<tw-passagedata pid="79" name="Classical music" tags="" position="1100,2700">You put your headphones in your ears, and press the play button. The calming sound of classical music enters your ears, and you silently hum along in your mind.
+<tw-passagedata pid="79" name="Classical music" tags="" position="650,2900">You put your headphones in your ears, and press the play button. The calming sound of classical music enters your ears, and you silently hum along in your mind.
+(if: (history:) contains &quot;Troll&quot;)[
+A knock on the door grabs your attention. You pull your headphones out of your ears, and open it. It&#39;s the girl from before.
+&quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
+You nod at her, and continue listening to music.
+]
+[[Continue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="80" name="Pop music" tags="" position="850.0002,2950">You put your headphones in your ears, and press the play button. The sound of pop rock enters your ears, and you silently sing along in your mind.
+(if: (history:) contains &quot;Troll&quot;)[
+A knock on the door grabs your attention. You pull your headphones out of your ears, and open it. It&#39;s the girl from before.
+&quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
+You nod at her, and continue listening to music.
+]
+[[Continue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="81" name="Opera!" tags="" position="450,2850">You put your headphones in your ears, and press the play button. The sweet sound of opera enters your ears, and you silently sing along in your mind.
+(if: (history:) contains &quot;Troll&quot;)[
+A knock on the door grabs your attention. You pull your headphones out of your ears, and open it. It&#39;s the girl from before.
+&quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
+You nod at her, and continue listening to music.
+]
+[[Continue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="82" name="Smooth jazz" tags="" position="950,3000">You put your headphones in your ears, and press the play button. The sweet sound of smooth jazz enters your ears, and you lean back and enjoy it.
+(if: (history:) contains &quot;Troll&quot;)[
+A knock on the door grabs your attention. You pull your headphones out of your ears, and open it. It&#39;s the girl from before.
+&quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
+You nod at her, and continue listening to music.
+]
+[[Continue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="83" name="No pets" tags="" position="1150,3150">&quot;No, I don&#39;t. Why is this relevant?&quot;
+&quot;It isn&#39;t really, I was just curious... I&#39;ve always wanted a pet myself.&quot; Madison admits, scratching the back of her head sheepishly.
+The two of you sit talking the rest of the train trip.
 
-[[Continue|Collect the stragglers]]</tw-passagedata>
-<tw-passagedata pid="80" name="Pop music" tags="" position="1100,2800">You put your headphones in your ears, and press the play button. The sound of pop rock enters your ears, and you silently sing along in your mind.
+[[Conitnue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="84" name="Dog" tags="" position="1300,3100">&quot;Yes, I have a dog.&quot;
+&quot;Oh, that&#39;s cool! I&#39;ve always wanted a pet myself.&quot; Madison admits, scratching the back of her head sheepishly.
+The two of you sit talking the rest of the train trip.
 
-[[Continue|Collect the stragglers]]</tw-passagedata>
-<tw-passagedata pid="81" name="Opera!" tags="" position="1000,2550">You put your headphones in your ears, and press the play button. The sweet sound of opera enters your ears, and you silently sing along in your mind.
+[[Conitnue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="85" name="Birds!" tags="" position="1400,3100">&quot;I own a canary bird! It&#39;s really noisy.&quot;
+&quot;Oh, that&#39;s cool! Not that it&#39;s noisy, I mean, I&#39;ve just always wanted a pet myself.&quot; Madison admits, scratching the back of her head sheepishly.
+The two of you sit talking the rest of the train trip.
 
-[[Continue|Collect the stragglers]]</tw-passagedata>
-<tw-passagedata pid="82" name="Smooth jazz" tags="" position="1000,2950">You put your headphones in your ears, and press the play button. The sweet sound of smooth jazz enters your ears, and you lean back and enjoy it.
+[[Conitnue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="86" name="Cat" tags="" position="1800.0001,3450">&quot;I have a cat. It&#39;s very independant.&quot;
+&quot;Oh, that&#39;s cool! I&#39;ve always wanted a pet myself.&quot; Madison admits, scratching the back of her head sheepishly.
+The two of you sit talking the rest of the train trip.
 
-[[Continue|Collect the stragglers]]</tw-passagedata>
-<tw-passagedata pid="83" name="Collect the stragglers" tags="" position="850,2750">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="84" name="No pets" tags="" position="1150,3200">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="85" name="Dog" tags="" position="1300,3100">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="86" name="Birds!" tags="" position="1400,3100">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="87" name="Cat" tags="" position="1550,3200">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="88" name="GoT" tags="" position="1500,2950">You pull your luggage from the luggage compartment, and rummage through it until you find Game of Thrones. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
-
-[[Continue|More stragglers]]</tw-passagedata>
-<tw-passagedata pid="89" name="HG" tags="" position="1900,3000">You pull your luggage from the luggage compartment, and rummage through it until you find Hunger Games. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
-
-[[Continue|More stragglers]]</tw-passagedata>
-<tw-passagedata pid="90" name="TH" tags="" position="2100,2900">You pull your luggage from the luggage compartment, and rummage through it until you find The Hobbit. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
-
-[[Continue|More stragglers]]</tw-passagedata>
-<tw-passagedata pid="91" name="Sherlock" tags="" position="1900,2750">You pull your luggage from the luggage compartment, and rummage through it until you find A Study in Scarlet. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
-
-[[Continue|More stragglers]]</tw-passagedata>
-<tw-passagedata pid="92" name="History lessons" tags="" position="2150,3050">You pull your luggage from the luggage compartment, and rummage through it until you find Hogwarts: A History. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
-
-[[Continue|More stragglers]]</tw-passagedata>
-<tw-passagedata pid="93" name="More stragglers" tags="" position="2050,3200">Double-click this passage to edit it.</tw-passagedata>
+[[Conitnue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="87" name="GoT" tags="" position="1550.0001,3000">You pull your luggage from the luggage compartment, and rummage through it until you find Game of Thrones. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
+(if: (history:) contains &quot;Troll&quot;)[
+A knock on the door grabs your attention. You put a bookmark in your book, and open the door. It&#39;s the girl from before.
+&quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
+You nod at her, and continue reading.
+]
+[[Continue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="88" name="HG" tags="" position="1900,3000">You pull your luggage from the luggage compartment, and rummage through it until you find Hunger Games. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
+(if: (history:) contains &quot;Troll&quot;)[
+A knock on the door grabs your attention. You put a bookmark in your book, and open the door. It&#39;s the girl from before.
+&quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
+You nod at her, and continue reading.
+]
+[[Continue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="89" name="TH" tags="" position="2100.0002000000004,2950">You pull your luggage from the luggage compartment, and rummage through it until you find The Hobbit. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
+(if: (history:) contains &quot;Troll&quot;)[
+A knock on the door grabs your attention. You put a bookmark in your book, and open the door. It&#39;s the girl from before.
+&quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
+You nod at her, and continue reading.
+]
+[[Continue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="90" name="Sherlock" tags="" position="1900,2750">You pull your luggage from the luggage compartment, and rummage through it until you find A Study in Scarlet. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
+(if: (history:) contains &quot;Troll&quot;)[
+A knock on the door grabs your attention. You put a bookmark in your book, and open the door. It&#39;s the girl from before.
+&quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
+You nod at her, and continue reading.
+]
+[[Continue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="91" name="History lessons" tags="" position="2200.0001,3100">You pull your luggage from the luggage compartment, and rummage through it until you find Hogwarts: A History. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
+(if: (history:) contains &quot;Troll&quot;)[
+A knock on the door grabs your attention. You put a bookmark in your book, and open the door. It&#39;s the girl from before.
+&quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
+You nod at her, and continue reading.
+]
+[[Continue|Continue09]]</tw-passagedata>
+<tw-passagedata pid="92" name="Continue09" tags="" position="1300.0001,3600"></tw-passagedata>
+<tw-passagedata pid="93" name="Crickets" tags="" position="700,3350">After finishing scrolling through your music library, you let out an exasperated sigh and put your MP3 player back into your bag. You stare out the window in silence.
+(if: (history:) contains &quot;Troll&quot;)[
+A knock on the door grabs your attention. You pull your headphones out of your ears, and open it. It&#39;s the girl from before.
+&quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
+You nod at her, and continue listening to music.
+]
+[[Continue|Continue09]]</tw-passagedata>
 </tw-storydata>
