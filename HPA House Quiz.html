@@ -75,7 +75,7 @@ tw-link[passage-name="Debug"] {
   position: fixed;
   bottom: 0;
   left: 50%;
-  color: #fff;
+  color: transparent;
   cursor: default;
 }
 
@@ -104,6 +104,7 @@ FB.init({
  js.src = "http://connect.facebook.net/da/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
 
 
 
@@ -170,6 +171,8 @@ What will you do?
 
 [[Follow it! I have nowhere I need to be anyways.|Follow it!]]
 [[Ignore it. It might even be hostile!|Ignore it]]
+
+&lt;img src=&quot;fox.png&quot; /&gt;
 
 (set: $h to it +15)
 (set: $g to it +5)</tw-passagedata>
@@ -410,7 +413,7 @@ What will you do?
 [[Continue|Continue03]]
 
 (set: $g to it +10)</tw-passagedata>
-<tw-passagedata pid="48" name="Stat debug" tags="footer" position="700.0001,100">[Stats]&lt;Stats|(click-replace: ?Stats)[Gyffindor: $g
+<tw-passagedata pid="48" name="Stat debug" tags="footer" position="700,100">[Stats]&lt;Stats|(click-replace: ?Stats)[Gyffindor: $g
 Ravenclaw: $r
 Hufflepuff: $h
 Slytherin: $s]
