@@ -90,6 +90,12 @@ tw-hook[name="Stats"] {
 tw-icon {
   opacity: 0.2;
 }
+
+img {
+  margin: 0 auto;
+  width: 75%;
+  display: block;
+}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 window.fbAsyncInit = function() {
 FB.init({
@@ -105,6 +111,8 @@ FB.init({
  js.src = "http://connect.facebook.net/da/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+
 
 
 
@@ -190,6 +198,7 @@ What will you do?
 [[I&#39;m going to crouch down and let it sniff my hand, to show it that I&#39;m not a threat.|Crouch]]
 [[I&#39;m going to run away. I&#39;m not going to deal with an angry badger!|Run]]
 
+&lt;img src=&quot;badger.png&quot; /&gt;
 (set: $g to it + 25)
 (set: $r to it + 50)</tw-passagedata>
 <tw-passagedata pid="11" name="Branch" tags="" position="1900,450">You back a couple of steps backwards, before reaching down to grab a stick off the forest floor. The badger crouches down, as if preparing to lunge at you. Before it has the chance to, however, you walk towards it, waving your stick around. The badger seems very unnerved and backs away. Throwing your stick at the badger seems to do the trick, and it scurries off.
@@ -254,6 +263,7 @@ What will you do?
 
 [[Continue|Continue02]] 
 
+&lt;img src=&quot;spear.png&quot; /&gt;
 (set: $s to it +10)</tw-passagedata>
 <tw-passagedata pid="21" name="Continue02" tags="" position="2350,1150">(if: (history:) contains &quot;Campfire&quot;)[A loud howl suddenly shakes you out of your sleep. You bolt up to see a lone wolf glaring at your campfire, the hairs on its muzzle slightly singed. It turns its eyes towards you with interest, before they return to the fire. The moonlight dimly illuminates your surroundings, and the flames have almost died down to embers.
 What will you do?
@@ -301,7 +311,9 @@ What will you do?
 [[I will search for animal trails. They should lead to water.|Trails]]</tw-passagedata>
 <tw-passagedata pid="26" name="Divining Rod" tags="" position="1300,2200">You grab a branch off the ground, that has the desired three-pronged design. Holding two of the three ends, you follow the mystical device to wherever it leads you. It seems to want you to go into the deep ends of the forest.
 
-[[Continue|Continue08]]</tw-passagedata>
+[[Continue|Continue08]]
+
+&lt;img src=&quot;rod.png&quot; /&gt;</tw-passagedata>
 <tw-passagedata pid="27" name="Walk" tags="" position="1450,2100">You walk around mindlessly, before finding yourself in the deeper parts of the woods. You ponder for a moment about how you got there, but shrug it off.
 
 [[Continue|Continue08]]</tw-passagedata>
@@ -459,28 +471,48 @@ What will you do?
 <tw-passagedata pid="55" name="You&#39;re a slytherin!" tags="" position="450,450">Double-click this passage to edit it.</tw-passagedata>
 <tw-passagedata pid="56" name="Exploration yay" tags="" position="800,1000">You walk through the ruins, looking for any signs of the civilization that must have built it. Your search is rewarded when you find a somewhat intact wall with what looks like chicken-scratches. You can&#39;t decipher it though, and after a while, you leave the place.
 
-[[Continue|Continue06]]</tw-passagedata>
+[[Continue|Continue06]]
+
+(set: $h to it +10)
+(set: $r to it +5)</tw-passagedata>
 <tw-passagedata pid="57" name="Definitely boring" tags="" position="850,1250">You eye the ruins warily, not wanting to stay around longer than necessary. You leave the rubble behind, and continue through the forest.
 
-[[Continue|Continue06]]</tw-passagedata>
+[[Continue|Continue06]]
+
+
+(set: $g to it +5)
+(set: $h to it -5)</tw-passagedata>
 <tw-passagedata pid="58" name="Treasure??" tags="" position="950,1100">You walk around the crumbled rocks, scanning the area briefly for anything shiny. A quick flash of light catches your eyes, and you go closer to inspect. An intricate golden clock lies between the rubble, not in working condition, but it&#39;s gold nonetheless.
 
-[[Continue|Continue06]]</tw-passagedata>
+[[Continue|Continue06]]
+
+(set: $s to it +5)</tw-passagedata>
 <tw-passagedata pid="59" name="Continue06" tags="" position="600,1150">As you walk away from the ruins, you notice a circular clearing, devoid of trees. In the middle stands a pedestal with a large tome on it.
 What will you do?
 
 [[Read it! It might contain something interesting.|Reading is for nerds]]
 [[Leave it. I don&#39;t have time for reading.|Leave book]]
-[[Burn it! Burn it to the ground!|Burn baby burn]]</tw-passagedata>
+[[Burn it! Burn it to the ground!|Burn baby burn]]
+
+&lt;img src=&quot;book.png&quot; /&gt;</tw-passagedata>
 <tw-passagedata pid="60" name="Reading is for nerds" tags="" position="450,1400">You approach the book carefully, giving it a quick once-over. The book is covered in something that looks like fur, and the title reads &quot;Monster Book of Monsters&quot;. You try to open the book, before it suddenly seems to come to life, snapping at you agressively. As it chases you, you run for your life.
 
-[[Continue|Continue07]]</tw-passagedata>
+[[Continue|Continue07]]
+
+(set: $r to it +10)
+(set: $s to it +10)</tw-passagedata>
 <tw-passagedata pid="61" name="Leave book" tags="" position="600,1350">You look briefly at the book, reading over the title. &quot;Monster Book of Monsters&quot;. The furry exterior seems slightly concerning, and you decide to leave the book alone.
 
-[[Continue|Continue07]]</tw-passagedata>
+[[Continue|Continue07]]
+
+(set: $r to it -2)
+(set: $s to it -2)</tw-passagedata>
 <tw-passagedata pid="62" name="Burn baby burn" tags="" position="750,1400">You grab a box of matches from your pocket, briefly wondering why you&#39;re actually doing this. Oh, well, maybe the book could be dangerous? Leaving a burning match on the furry cover, you walk away from the fire in style.
 
-[[Continue|Continue07]]</tw-passagedata>
+[[Continue|Continue07]]
+
+(set: $s to it -2)
+(set: $r to it -5)</tw-passagedata>
 <tw-passagedata pid="63" name="Continue07" tags="" position="600,1550">You look up at the sky and realise that you should find somewhere to sleep.
 What will you do?
 
@@ -489,13 +521,19 @@ What will you do?
 [[Sleep on the ground.|Is this a good idea?]]</tw-passagedata>
 <tw-passagedata pid="64" name="Sleeping in the trees... again" tags="" position="650,1850">You walk around the trees for a bit, until you find a satisfactorily sturdy one. Climbing into the tree, you find a large branch and sleep.
 
-[[Continue|Continue03]]</tw-passagedata>
+[[Continue|Continue03]]
+
+(set: $r to it +5)</tw-passagedata>
 <tw-passagedata pid="65" name="Spooky" tags="" position="750,1700">You backtrack your way through the forest, finding a place amongst the crumbled buildings. You find a place that effectively blocks the wind, and fall asleep, hoping that the ruins won&#39;t collapse while you sleep.
 
-[[Continue|Continue03]]</tw-passagedata>
+[[Continue|Continue03]]
+
+(set: $h to it +5)</tw-passagedata>
 <tw-passagedata pid="66" name="Is this a good idea?" tags="" position="900,1600">You look around. The forest seems very calm and quiet. Deciding that this spot is as good as any, you lie down on the soft forest floor, quickly falling asleep.
 
-[[Continue|Continue03]]</tw-passagedata>
+[[Continue|Continue03]]
+
+(set: $h to it +5)</tw-passagedata>
 <tw-passagedata pid="67" name="Trails" tags="" position="1550,2100">You crouch down to examine the ground. Several footprints from deer seem to lead towards the inner part of the forest. You get up, and decide to follow the path.
 
 [[Continue|Continue08]]</tw-passagedata>
@@ -550,7 +588,7 @@ What will you say?
 [[&quot;Yes, I have a dog.&quot;|Dog]]
 [[&quot;I own a canary bird! It&#39;s really noisy.&quot;|Birds!]]
 [[&quot;I have a cat. It&#39;s very independant.&quot;|Cat]]</tw-passagedata>
-<tw-passagedata pid="75" name="Window peeking" tags="" position="1400.0001,2700">You stare out the window with unfocused eyes, as the terrain passes by. Most of the surroundings are filled with pine trees, and the sun is still high in the sky.
+<tw-passagedata pid="75" name="Window peeking" tags="" position="1400,2700">You stare out the window with unfocused eyes, as the terrain passes by. Most of the surroundings are filled with pine trees, and the sun is still high in the sky.
 You find your MP3 player, and scroll through your music library.
 What will you listen to?
 
@@ -591,7 +629,7 @@ A knock on the door grabs your attention. You pull your headphones out of your e
 You nod at her, and continue listening to music.
 ]
 [[Continue|Continue09]]</tw-passagedata>
-<tw-passagedata pid="80" name="Pop music" tags="" position="850.0002,2950">You put your headphones in your ears, and press the play button. The sound of pop rock enters your ears, and you silently sing along in your mind.
+<tw-passagedata pid="80" name="Pop music" tags="" position="850,2950">You put your headphones in your ears, and press the play button. The sound of pop rock enters your ears, and you silently sing along in your mind.
 (if: (history:) contains &quot;Troll&quot;)[
 A knock on the door grabs your attention. You pull your headphones out of your ears, and open it. It&#39;s the girl from before.
 &quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
@@ -627,12 +665,12 @@ The two of you sit talking the rest of the train trip.
 The two of you sit talking the rest of the train trip.
 
 [[Conitnue|Continue09]]</tw-passagedata>
-<tw-passagedata pid="86" name="Cat" tags="" position="1800.0001,3450">&quot;I have a cat. It&#39;s very independant.&quot;
+<tw-passagedata pid="86" name="Cat" tags="" position="1800,3450">&quot;I have a cat. It&#39;s very independant.&quot;
 &quot;Oh, that&#39;s cool! I&#39;ve always wanted a pet myself.&quot; Madison admits, scratching the back of her head sheepishly.
 The two of you sit talking the rest of the train trip.
 
 [[Conitnue|Continue09]]</tw-passagedata>
-<tw-passagedata pid="87" name="GoT" tags="" position="1550.0001,3000">You pull your luggage from the luggage compartment, and rummage through it until you find Game of Thrones. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
+<tw-passagedata pid="87" name="GoT" tags="" position="1550,3000">You pull your luggage from the luggage compartment, and rummage through it until you find Game of Thrones. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
 (if: (history:) contains &quot;Troll&quot;)[
 A knock on the door grabs your attention. You put a bookmark in your book, and open the door. It&#39;s the girl from before.
 &quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
@@ -646,7 +684,7 @@ A knock on the door grabs your attention. You put a bookmark in your book, and o
 You nod at her, and continue reading.
 ]
 [[Continue|Continue09]]</tw-passagedata>
-<tw-passagedata pid="89" name="TH" tags="" position="2100.0002000000004,2950">You pull your luggage from the luggage compartment, and rummage through it until you find The Hobbit. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
+<tw-passagedata pid="89" name="TH" tags="" position="2100,2950">You pull your luggage from the luggage compartment, and rummage through it until you find The Hobbit. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
 (if: (history:) contains &quot;Troll&quot;)[
 A knock on the door grabs your attention. You put a bookmark in your book, and open the door. It&#39;s the girl from before.
 &quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
@@ -660,14 +698,14 @@ A knock on the door grabs your attention. You put a bookmark in your book, and o
 You nod at her, and continue reading.
 ]
 [[Continue|Continue09]]</tw-passagedata>
-<tw-passagedata pid="91" name="History lessons" tags="" position="2200.0001,3100">You pull your luggage from the luggage compartment, and rummage through it until you find Hogwarts: A History. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
+<tw-passagedata pid="91" name="History lessons" tags="" position="2200,3100">You pull your luggage from the luggage compartment, and rummage through it until you find Hogwarts: A History. As the landscape steadily rolls by outside your window, you open the book by your bookmark and start reading.
 (if: (history:) contains &quot;Troll&quot;)[
 A knock on the door grabs your attention. You put a bookmark in your book, and open the door. It&#39;s the girl from before.
 &quot;Hey! I, uhh, couldn&#39;t find the food trolly. I hope that&#39;s okay... I guess I&#39;ll see you later?&quot;
 You nod at her, and continue reading.
 ]
 [[Continue|Continue09]]</tw-passagedata>
-<tw-passagedata pid="92" name="Continue09" tags="" position="1300.0001,3600"></tw-passagedata>
+<tw-passagedata pid="92" name="Continue09" tags="" position="1300,3600"></tw-passagedata>
 <tw-passagedata pid="93" name="Crickets" tags="" position="700,3350">After finishing scrolling through your music library, you let out an exasperated sigh and put your MP3 player back into your bag. You stare out the window in silence.
 (if: (history:) contains &quot;Troll&quot;)[
 A knock on the door grabs your attention. You pull your headphones out of your ears, and open it. It&#39;s the girl from before.
