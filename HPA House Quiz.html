@@ -102,6 +102,8 @@ img {
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 window.fbAsyncInit = function() {
 FB.init({
@@ -117,6 +119,8 @@ FB.init({
  js.src = "http://connect.facebook.net/da/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+
 
 
 
@@ -179,7 +183,9 @@ Thank you for finishing the test!
 You can share your result using the social media buttons below. You can then compare your result with your friends&#39;!
 
 Now that we know what house you&#39;re in, we would like to remind you to take a moment to check out our campagin, accio books.
-A hufflepuff like you should know how important it is that everyone has access to books and learning material. So please, help us by donating. (Those poor little kids in Uganda could really use those books.)</tw-passagedata>
+A hufflepuff like you should know how important it is that everyone has access to books and learning material. So please, help us by donating. (Those poor little kids in Uganda could really use those books.)
+
+[[Share your result on &lt;img src=&quot;fb.png&quot; style=&quot;margin: 0;width:60%;&quot; /&gt;|fb share]]</tw-passagedata>
 <tw-passagedata pid="4" name="You&#39;re a ravenclaw!" tags="" position="1100,5000">(if: $halp is true)[The hat lets out a guffaw. &quot;I like your style.&quot;]
 The sorting hat looks at the crowd before exclaiming;
 &quot;Ravenclaw!&quot;
@@ -190,17 +196,15 @@ Thank you for finishing the test!
 You can share your result using the social media buttons below. You can then compare your result with your friends&#39;!
 
 Now that we know what house you&#39;re in, we would like to remind you to take a moment to check out our campagin, accio books.
-A ravenclaw like you is sure to appreciate the need for books for everyone! So please, help us by donating. (Those poor little kids in Uganda could really use those books.)</tw-passagedata>
+A ravenclaw like you is sure to appreciate the need for books for everyone! So please, help us by donating. (Those poor little kids in Uganda could really use those books.)
+
+[[Share your result on &lt;img src=&quot;fb.png&quot; style=&quot;margin: 0;width:60%;&quot; /&gt;|fb share]]</tw-passagedata>
 <tw-passagedata pid="5" name="fb test" tags="" position="1850,4850">&lt;script&gt;
 FB.ui({
   method: &#39;share&#39;,
   href: &#39;bomjacob.github.io/hpaquiz&#39;,
 }, function(response){});
-&lt;/script&gt;
-
-
-
-</tw-passagedata>
+&lt;/script&gt;</tw-passagedata>
 <tw-passagedata pid="6" name="Debug" tags="" position="1650,4850">(link-repeat: &quot;Add Gryffinpoints&quot;)[(set: $g to it +5) (goto: &quot;Debug&quot;)]
 (link-repeat: &quot;Add Ravenpoints&quot;)[(set: $r to it +5) (goto: &quot;Debug&quot;)]
 (link-repeat: &quot;Add Hufflepoints&quot;)[(set: $h to it +5) (goto: &quot;Debug&quot;)]
@@ -573,7 +577,7 @@ What will you do?
 (set: $g to it +10)
 (set: $r to it -10)
 (set: $s to it -15)</tw-passagedata>
-<tw-passagedata pid="54" name="You&#39;re a gryffindor!" tags="" position="1550,5000">(if: halp is true)[The hat seems very amused. &quot;So you would like to be a Gryffindor?&quot;
+<tw-passagedata pid="54" name="You&#39;re a gryffindor!" tags="" position="1550,5000">(if: $halp is true)[The hat seems very amused. &quot;So you would like to be a Gryffindor?&quot;
 You nod.]
 
 The sorting hat looks at the crowd before exclaiming;
@@ -585,8 +589,10 @@ You can share your result using the social media buttons below. You can then com
 
 Now that we know what house you&#39;re in, we would like to remind you to take a moment to check out our campagin, accio books.
 We also have a house cup where you get points depending on how much you donate. Help your Gryffindor comrades achieve victory!...
-So please, help us out by donating. (Those poor little kids in Uganda could really use those books.)</tw-passagedata>
-<tw-passagedata pid="55" name="You&#39;re a slytherin!" tags="" position="1400,5000">(if: halp is true)[&quot;Ohoh, so you want to be a Slytherin?&quot; the hat says, amusedly. &quot;Very well.&quot;]
+So please, help us out by donating. (Those poor little kids in Uganda could really use those books.)
+
+[[Share your result on &lt;img src=&quot;fb.png&quot; style=&quot;margin: 0;width:60%;&quot; /&gt;|fb share]]</tw-passagedata>
+<tw-passagedata pid="55" name="You&#39;re a slytherin!" tags="" position="1400,5000">(if: $halp is true)[&quot;Ohoh, so you want to be a Slytherin?&quot; the hat says, amusedly. &quot;Very well.&quot;]
 
 The sorting hat looks at the crowd before exclaiming;
 &quot;Slytherin!&quot;
@@ -595,7 +601,9 @@ Thank you for finishing the test!
 
 You can share your result using the social media buttons below. You can then compare your result with your friends&#39;!
 
-Now that we know what house you&#39;re in, we would like to remind you to take a moment to check out our campagin, accio books. We even have a house cup where you get points depending on how much you donate! So please, help us by donating. (Those poor little kids in Uganda could really use those books.)</tw-passagedata>
+Now that we know what house you&#39;re in, we would like to remind you to take a moment to check out our campagin, accio books. We even have a house cup where you get points depending on how much you donate! So please, help us by donating. (Those poor little kids in Uganda could really use those books.)
+
+[[Share your result on &lt;img src=&quot;fb.png&quot; style=&quot;margin: 0;width:60%;&quot; /&gt;|fb share]]</tw-passagedata>
 <tw-passagedata pid="56" name="Exploration yay" tags="" position="800,1000">You walk through the ruins, looking for any signs of the civilization that must have built it. Your search is rewarded when you find a somewhat intact wall with what looks like chicken-scratches. You can&#39;t decipher it though, and after a while, you leave the place.
 
 [[Continue|Continue06]]
@@ -968,7 +976,7 @@ What do you think?
 [[Gryffindor, I hope.|BP for Gryffindor]]
 [[I have no idea...|Dunno]]
 [[I don&#39;t have a preference. I&#39;d like it no matter where I&#39;m going.|Totally not the same as the above]]</tw-passagedata>
-<tw-passagedata pid="99" name="Bonus points (hereafter BP) for Ravenclaw" tags="" position="1000.0001,4200">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
+<tw-passagedata pid="99" name="Bonus points (hereafter BP) for Ravenclaw" tags="" position="1000,4200">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
 
 [[Continue|The final!!]]
 
@@ -983,7 +991,7 @@ What do you think?
 [[Continue|The final!!]]
 
 (set: $h to it +10)</tw-passagedata>
-<tw-passagedata pid="102" name="BP for Gryffindor" tags="" position="1400.0001,4300">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
+<tw-passagedata pid="102" name="BP for Gryffindor" tags="" position="1400,4300">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
 
 [[Continue|The final!!]]
 
@@ -1002,4 +1010,11 @@ What do you think?
 &quot;Well, well, well... What have we here?&quot; it says in a gruff voice. You look at your peers. All eyes are pointed at you.
 
 [[Continue|Almost end]]</tw-passagedata>
+<tw-passagedata pid="106" name="fb share" tags="" position="1350,5250">Please allow popup windows for Facebook sharing to work.
+&lt;script&gt;
+FB.ui({
+  method: &#39;share&#39;,
+  href: &#39;bomjacob.github.io/hpaquiz&#39;,
+}, function(response){});
+&lt;/script&gt;</tw-passagedata>
 </tw-storydata>
