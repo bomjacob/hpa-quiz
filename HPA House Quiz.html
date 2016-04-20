@@ -97,6 +97,8 @@ img {
   display: block;
 }
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 window.fbAsyncInit = function() {
 FB.init({
@@ -119,6 +121,8 @@ FB.init({
 
 
 
+
+
 </script><tw-passagedata pid="1" name="Welcome" tags="" position="1450,100">Greetings traveler, and welcome to the Harry Potter Alliance house quiz! In this quiz, we will present you with some situations, and you will get some choices regarding what to do. In the end, we will tell you what Hogwarts house you belong to.
 
 You can use the arrows to the left of the dialogue to go back to the previous question, should you regret your choices.
@@ -128,7 +132,7 @@ This quiz is a part of our &quot;Accio Books&quot; campagin, that we would recom
 Without further ado, press the &quot;Start&quot; button when you&#39;re ready!
 
 [[Start]]</tw-passagedata>
-<tw-passagedata pid="2" name="Almost end" tags="" position="350,150">The sorting hat is talking quietly to itself.
+<tw-passagedata pid="2" name="Almost end" tags="" position="1300.0001,4700">The sorting hat is quietly murmuring to itself, looking through your memories and personality traits. Your actions are being judged, as you sit 
 {{(set: $points to (a: $g, $r, $h, $s))
 (set: $show to (a:))
 (set: $max to (max: ...$points))
@@ -142,13 +146,13 @@ Without further ado, press the &quot;Start&quot; button when you&#39;re ready!
 	]
 	(if: ($i &gt;= 5) and (time &gt; 3s))[(stop:)]}
 	(if: time &gt; 2s)[
-		(if: $show&#39;s length &gt; 1)[
-			Suddenly it speaks up, though no one around you seems to hear.&lt;br/&gt;
-			&quot;What the hell are you??&quot;&lt;br/&gt;&lt;br/&gt;
-			(if: $show contains 1)[[[Griffendor|You&#39;re a gryffindor!]]&lt;br/&gt;]
-			(if: $show contains 2)[[[Ravenclaw|You&#39;re a ravenclaw!]]&lt;br/&gt;]
-			(if: $show contains 3)[[[Hufflepuff|You&#39;re a hufflepuff!]]&lt;br/&gt;]
-			(if: $show contains 4)[[[Slytherin|You&#39;re a slytherin!]]]
+		(if: $show&#39;s length &gt; 1)[(set: $halp to true)
+			It lowly mumbles something to you.&lt;br/&gt;
+			&quot;I am having a hard time placing you... Maybe Gryffindor?... Hufflepuff? Perhaps you would rather be a Slytherin?&quot;&lt;br/&gt;&lt;br/&gt;
+			(if: $show contains 1)[[[&quot;Please Gryffindor, please Gryffindor...&quot;|You&#39;re a gryffindor!]]&lt;br/&gt;]
+			(if: $show contains 2)[[[&quot;I believe I would rather be a Ravenclaw...&quot;|You&#39;re a ravenclaw!]]&lt;br/&gt;]
+			(if: $show contains 3)[[[&quot;Can I be a Hufflepuff?...&quot;|You&#39;re a hufflepuff!]]&lt;br/&gt;]
+			(if: $show contains 4)[[[&quot;Please make me a Slytherin...&quot;|You&#39;re a slytherin!]]]
 		]
 		(else:)[
 			It seems to have finally come to a conclusion.&lt;br/&gt;&lt;br/&gt;
@@ -159,9 +163,15 @@ Without further ado, press the &quot;Start&quot; button when you&#39;re ready!
 		]
 	]
 ]}</tw-passagedata>
-<tw-passagedata pid="3" name="You&#39;re a hufflepuff!" tags="" position="300,450">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="4" name="You&#39;re a ravenclaw!" tags="" position="150,450">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="5" name="fb test" tags="" position="900,300">&lt;script&gt;
+<tw-passagedata pid="3" name="You&#39;re a hufflepuff!" tags="" position="1250.0001,5000">(if: $halp is true)[The hat pauses for a moment before chuckling lowly to itself. &quot;Very well.&quot;]
+
+The sorting hat looks at the crowd before exclaiming;
+&quot;Hufflepuff!&quot;</tw-passagedata>
+<tw-passagedata pid="4" name="You&#39;re a ravenclaw!" tags="" position="1100.0001,5000">(if: $halp is true)[The hat lets out a guffaw. &quot;I like your style.&quot;]
+The sorting hat looks at the crowd before exclaiming;
+&quot;Ravenclaw!&quot;
+</tw-passagedata>
+<tw-passagedata pid="5" name="fb test" tags="" position="1850,4850">&lt;script&gt;
 FB.ui({
   method: &#39;share&#39;,
   href: &#39;bomjacob.github.io/hpaquiz&#39;,
@@ -171,7 +181,7 @@ FB.ui({
 
 
 </tw-passagedata>
-<tw-passagedata pid="6" name="Debug" tags="" position="700,300">(link-repeat: &quot;Add Gryffinpoints&quot;)[(set: $g to it +5) (goto: &quot;Debug&quot;)]
+<tw-passagedata pid="6" name="Debug" tags="" position="1650,4850">(link-repeat: &quot;Add Gryffinpoints&quot;)[(set: $g to it +5) (goto: &quot;Debug&quot;)]
 (link-repeat: &quot;Add Ravenpoints&quot;)[(set: $r to it +5) (goto: &quot;Debug&quot;)]
 (link-repeat: &quot;Add Hufflepoints&quot;)[(set: $h to it +5) (goto: &quot;Debug&quot;)]
 (link-repeat: &quot;Add Slytherpoints&quot;)[(set: $s to it +5) (goto: &quot;Debug&quot;)]
@@ -436,7 +446,7 @@ What will you do?
 [[Continue|Continue03]]
 
 (set: $g to it +10)</tw-passagedata>
-<tw-passagedata pid="48" name="Stat debug" tags="footer" position="700,100">[Stats]&lt;Stats|(click-replace: ?Stats)[Gyffindor: $g
+<tw-passagedata pid="48" name="Stat debug" tags="footer" position="1650,4650">[Stats]&lt;Stats|(click-replace: ?Stats)[Gyffindor: $g
 Ravenclaw: $r
 Hufflepuff: $h
 Slytherin: $s]
@@ -477,8 +487,15 @@ What will you do?
 
 (set: $s to it +20)
 (set: $r to it -5)</tw-passagedata>
-<tw-passagedata pid="54" name="You&#39;re a gryffindor!" tags="" position="600,450">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="55" name="You&#39;re a slytherin!" tags="" position="450,450">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="54" name="You&#39;re a gryffindor!" tags="" position="1550.0001,5000">(if: halp is true)[The hat seems very amused. &quot;So you would like to be a Gryffindor?&quot;
+You nod.]
+
+The sorting hat looks at the crowd before exclaiming;
+&quot;Gyffindor!&quot;</tw-passagedata>
+<tw-passagedata pid="55" name="You&#39;re a slytherin!" tags="" position="1400.0001,5000">(if: halp is true)[&quot;Ohoh, so you want to be a Slytherin?&quot; the hat says, amusedly. &quot;Very well.&quot;]
+
+The sorting hat looks at the crowd before exclaiming;
+&quot;Slytherin!&quot;</tw-passagedata>
 <tw-passagedata pid="56" name="Exploration yay" tags="" position="800,1000">You walk through the ruins, looking for any signs of the civilization that must have built it. Your search is rewarded when you find a somewhat intact wall with what looks like chicken-scratches. You can&#39;t decipher it though, and after a while, you leave the place.
 
 [[Continue|Continue06]]
@@ -729,19 +746,19 @@ A knock on the door grabs your attention. You pull your headphones out of your e
 You nod at her, and continue listening to music.
 ]
 [[Continue|Continue09]]</tw-passagedata>
-<tw-passagedata pid="94" name="Being social" tags="" position="1050.0001,3750">You look around the crowd for a while, until you notice (if: (history:) contains &quot;Silence&quot; or &quot;Who??&quot;)[Madison](else:)[that girl from before] together with some other students. You decide to approach them, and instantly get involved in the conversation.
+<tw-passagedata pid="94" name="Being social" tags="" position="1050,3750">You look around the crowd for a while, until you notice (if: (history:) contains &quot;Silence&quot; or (history:) contains &quot;Who??&quot;)[Madison](else:)[that girl from before] together with some other students. You decide to approach them, and instantly get involved in the conversation.
 
 [[Continue|Dawn of a new Continue (that has two digits) aka 10]]</tw-passagedata>
-<tw-passagedata pid="95" name="Notice me sempai" tags="" position="1200.0001,3800">You look at the crowd with uncertainty. Most of the other students have already found someone to speak with, leaving you at a loss for what to do. After a while, (if: (history:) contains &quot;Silence&quot; or &quot;Who??&quot;)[Madison](else:)[that girl from before] approaches you, and you start talking.
+<tw-passagedata pid="95" name="Notice me sempai" tags="" position="1200,3800">You look at the crowd with uncertainty. Most of the other students have already found someone to speak with, leaving you at a loss for what to do. After a while, (if: (history:) contains &quot;Silence&quot; or &quot;Who??&quot;)[Madison](else:)[that girl from before] approaches you, and you start talking.
 
 [[Continue|Dawn of a new Continue (that has two digits) aka 10]]</tw-passagedata>
-<tw-passagedata pid="96" name="Loner" tags="" position="1400.0001,3800">You look at the crowd, not particularly feeling like mingling with everyone else. The rest of your trip happens in (if: (history:) contains &quot;The DoTs are X-treme&quot;)[even more silence. Your ability to pass time in silence surely surpasses any and all participants prior to you. Good job.](else:)[silence.]
+<tw-passagedata pid="96" name="Loner" tags="" position="1400,3800">You look at the crowd, not particularly feeling like mingling with everyone else. The rest of your trip happens in (if: (history:) contains &quot;The DoTs are X-treme&quot;)[even more silence. Your ability to pass time in silence surely surpasses any and all participants prior to you. Good job.](else:)[silence.]
 
 [[Continue|Dawn of a new Continue (that has two digits) aka 10]]</tw-passagedata>
-<tw-passagedata pid="97" name="The pet" tags="" position="1550.0001,3750">You scan the crowd before finding some people that seem to know where they&#39;re going. You approach them and start talking with them. They seem wary of you at first, but you are quickly integrated into the group.
+<tw-passagedata pid="97" name="The pet" tags="" position="1550,3750">You scan the crowd before finding some people that seem to know where they&#39;re going. You approach them and start talking with them. They seem wary of you at first, but you are quickly integrated into the group.
 
 [[Continue|Dawn of a new Continue (that has two digits) aka 10]]</tw-passagedata>
-<tw-passagedata pid="98" name="Dawn of a new Continue (that has two digits) aka 10" tags="" position="1300.0001,4050">&quot;This is it...&quot; you mutter to yourself, as every student stops outside the door to the great hall.
+<tw-passagedata pid="98" name="Dawn of a new Continue (that has two digits) aka 10" tags="" position="1300,4050">&quot;This is it...&quot; you mutter to yourself, as every student stops outside the door to the great hall.
 &quot;What house do you think you&#39;ll enter?&quot; you hear someone say in the crowd. You think about this yourself.
 What do you think?
 
@@ -751,23 +768,26 @@ What do you think?
 [[Gryffindor, I hope.|BP for Gryffindor]]
 [[I have no idea...|Dunno]]
 [[I don&#39;t have a preference. I&#39;d like it no matter where I&#39;m going.|Totally not the same as the above]]</tw-passagedata>
-<tw-passagedata pid="99" name="Bonus points (hereafter BP) for Ravenclaw" tags="" position="1000.0001,4200">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
+<tw-passagedata pid="99" name="Bonus points (hereafter BP) for Ravenclaw" tags="" position="1000,4200">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
 
 [[Continue|The final!!]]</tw-passagedata>
-<tw-passagedata pid="100" name="BP for Slytherin" tags="" position="1000.0001,4400">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
+<tw-passagedata pid="100" name="BP for Slytherin" tags="" position="1000,4400">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
 
 [[Continue|The final!!]]</tw-passagedata>
-<tw-passagedata pid="101" name="BP for Hufflepuff" tags="" position="1200.0001,4300">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
+<tw-passagedata pid="101" name="BP for Hufflepuff" tags="" position="1200,4300">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
 
 [[Continue|The final!!]]</tw-passagedata>
-<tw-passagedata pid="102" name="BP for Gryffindor" tags="" position="1400.0001,4300">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
+<tw-passagedata pid="102" name="BP for Gryffindor" tags="" position="1400,4300">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
 
 [[Continue|The final!!]]</tw-passagedata>
-<tw-passagedata pid="103" name="Dunno" tags="" position="1600.0001,4400">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
+<tw-passagedata pid="103" name="Dunno" tags="" position="1600,4400">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
 
 [[Continue|The final!!]]</tw-passagedata>
-<tw-passagedata pid="104" name="Totally not the same as the above" tags="" position="1600.0001,4200">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
+<tw-passagedata pid="104" name="Totally not the same as the above" tags="" position="1600,4200">You follow the crowd into the main room, preparing yourself for when your name is called. After a couple of tense minutes, you are called to the stage, and a hat is placed on your head.
 
 [[Continue|The final!!]]</tw-passagedata>
-<tw-passagedata pid="105" name="The final!!" tags="" position="1300,4500">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="105" name="The final!!" tags="" position="1300,4500">The hat seems to look down on you.
+&quot;Well, well, well... What have we here?&quot; it says in a gruff voice. You look at your peers. All eyes are pointed at you.
+
+[[Continue|Almost end]]</tw-passagedata>
 </tw-storydata>
